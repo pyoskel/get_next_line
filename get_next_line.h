@@ -6,7 +6,7 @@
 /*   By: pabartoc <pabartoc@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/22 23:52:00 by pabartoc          #+#    #+#             */
-/*   Updated: 2025/11/25 12:02:51 by pabartoc         ###   ########.fr       */
+/*   Updated: 2025/11/25 13:01:01 by pabartoc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,5 +23,6 @@
 #endif
 
 char	*get_next_line(int fd);
+size_t	strlen_gnl(const char *str);
 
 #endif
