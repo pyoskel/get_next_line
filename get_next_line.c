@@ -6,9 +6,11 @@
 /*   By: pabartoc <pabartoc@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/22 23:51:34 by pabartoc          #+#    #+#             */
-/*   Updated: 2025/11/23 05:10:07 by pabartoc         ###   ########.fr       */
+/*   Updated: 2025/11/25 11:53:50 by pabartoc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "get_next_line.h"
 
 char	*get_next_line(int fd)
 {
