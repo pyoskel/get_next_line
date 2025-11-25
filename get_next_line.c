@@ -6,7 +6,7 @@
 /*   By: pabartoc <pabartoc@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/22 23:51:34 by pabartoc          #+#    #+#             */
-/*   Updated: 2025/11/25 12:58:42 by pabartoc         ###   ########.fr       */
+/*   Updated: 2025/11/25 18:15:08 by pabartoc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,3 +28,22 @@ size_t	strlen_gnl(const char *str)
 		i++;
 	return (i);
 }
+
+char	*strchr_gnl(const char *str, int c)
+{
+	size_t	i;
+
+	i = 0;
+	if (!str)
+		return (NULL);
+	while (str[i] != '\0')
+	{
+		if ((unsigned char) str[i] == (unsigned char) c)
+			return ((char *) &str[i]);
+		i++;
+	}
+	if ((unsigned char) str[i] == (unsigned char) c)
+		return ((char *) &str[i]);
+	return (NULL);
+}
+
