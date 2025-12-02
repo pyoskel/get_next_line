@@ -6,7 +6,7 @@
 /*   By: pabartoc <pabartoc@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/22 23:52:00 by pabartoc          #+#    #+#             */
-/*   Updated: 2025/11/28 18:17:18 by pabartoc         ###   ########.fr       */
+/*   Updated: 2025/12/02 21:50:30 by pabartoc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@
 # include <stdlib.h> // for malloc, free
 # include <stddef.h> // for size_t
 # include <fcntl.h>  // for open and flags (optional)
+# include <stdio.h>  // for printf (optional)
 
 #ifndef BUFFER_SIZE
 # define BUFFER_SIZE 42
@@ -25,5 +26,6 @@
 char	*get_next_line(int fd);
 size_t	strlen_gnl(const char *str);
 char	*strchr_gnl(const char *str, int c);
+char	*gnl_strjoin(char *str1, char *str2);
 
 #endif

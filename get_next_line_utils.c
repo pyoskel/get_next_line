@@ -6,7 +6,7 @@
 /*   By: pabartoc <pabartoc@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/22 23:54:08 by pabartoc          #+#    #+#             */
-/*   Updated: 2025/12/02 21:18:10 by pabartoc         ###   ########.fr       */
+/*   Updated: 2025/12/02 21:50:48 by pabartoc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ char	*gnl_strchr(const char *str, int c)
 	return (NULL);
 }
 
-char *gnl_strjoin(char *str1, char *str2)
+char	*gnl_strjoin(char *str1, char *str2)
 {
 	char	*result;
 	size_t	total_len;
