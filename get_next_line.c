@@ -6,7 +6,7 @@
 /*   By: pabartoc <pabartoc@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/22 23:51:34 by pabartoc          #+#    #+#             */
-/*   Updated: 2025/11/28 18:18:43 by pabartoc         ###   ########.fr       */
+/*   Updated: 2025/12/02 21:06:46 by pabartoc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,5 @@ char	*get_next_line(int fd)
 
 	if (fd < 0 || BUFFER_SIZE <= 0)
 		return (NULL);
+	return (NULL);
 }
-
-
