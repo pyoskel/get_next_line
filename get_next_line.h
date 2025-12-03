@@ -6,7 +6,7 @@
 /*   By: pabartoc <pabartoc@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/22 23:52:00 by pabartoc          #+#    #+#             */
-/*   Updated: 2025/12/02 21:50:30 by pabartoc         ###   ########.fr       */
+/*   Updated: 2025/12/03 23:10:52 by pabartoc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,8 +24,8 @@
 #endif
 
 char	*get_next_line(int fd);
-size_t	strlen_gnl(const char *str);
-char	*strchr_gnl(const char *str, int c);
+size_t	gnl_strlen(const char *str);
+char	*gnl_strchr(const char *str, int c);
 char	*gnl_strjoin(char *str1, char *str2);
 
 #endif
