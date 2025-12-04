@@ -6,7 +6,7 @@
 /*   By: pabartoc <pabartoc@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/22 23:54:08 by pabartoc          #+#    #+#             */
-/*   Updated: 2025/12/04 20:07:53 by pabartoc         ###   ########.fr       */
+/*   Updated: 2025/12/04 20:25:25 by pabartoc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ size_t	gnl_strlen(const char *str)
 	return (i);
 }
 
-char	*gnl_strchr(const char *buffer)
+int	gnl_strchr(const char *buffer)
 {
 	size_t	i;
 
