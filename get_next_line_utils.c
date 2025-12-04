@@ -6,7 +6,7 @@
 /*   By: pabartoc <pabartoc@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/22 23:54:08 by pabartoc          #+#    #+#             */
-/*   Updated: 2025/12/04 20:57:01 by pabartoc         ###   ########.fr       */
+/*   Updated: 2025/12/04 21:28:06 by pabartoc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,13 @@ size_t	gnl_strlen(const char *str)
 	return (i);
 }
 
-int	gnl_strchr(const char *buffer)
+/**
+ * basically ft_strchr but specific to this project
+ * Search for a newline.
+ * Returns 1 if found, otherwise 0.
+ * (Simplified compared to strchr, since we only need bool)
+ */
+int	gnl_has_newline(const char *buffer)
 {
 	size_t	i;
 
@@ -38,7 +44,11 @@ int	gnl_strchr(const char *buffer)
 	return (0);
 }
 
-char	*gnl_strjoin(char *line, char *buffer)
+/**
+ * basically ft_strjoin but specific to this project
+ * Connects ‘line’ with the part of ‘buffer’ up to the first '\n'.
+ */
+char	*gnl_join_chunk(char *line, char *buffer)
 {
 	char	*new_line;
 	size_t	len_line;
@@ -67,6 +77,11 @@ char	*gnl_strjoin(char *line, char *buffer)
 	return (new_line);
 }
 
+/**
+ * basically ft_memmove but specific to this project
+ * Moves the “rest” (everything after ‘\n’) to the beginning of the buffer.
+ * Example: "Hallo\nWelt\0" -> "Welt\0..."
+ */
 void	gnl_clean_buffer(char *buffer)
 {
 	size_t	i;
