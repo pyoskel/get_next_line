@@ -6,7 +6,7 @@
 /*   By: pabartoc <pabartoc@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/22 23:51:34 by pabartoc          #+#    #+#             */
-/*   Updated: 2025/12/04 19:09:17 by pabartoc         ###   ########.fr       */
+/*   Updated: 2025/12/04 19:11:21 by pabartoc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,9 @@ char	*get_next_line(int fd)
             bytes = read(fd, remainder, BUFFER_SIZE);
             if (bytes < 0)
 				return (NULL);
+			if (bytes == 0)
+				break;
+			remainder[bytes] = '\0';
         }
         line = gnl_strjoin(line, remainder);
         if (gnl_strchr(remainder, '\n'))
