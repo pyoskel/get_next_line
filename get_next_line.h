@@ -6,7 +6,7 @@
 /*   By: pabartoc <pabartoc@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/22 23:52:00 by pabartoc          #+#    #+#             */
-/*   Updated: 2025/12/03 23:10:52 by pabartoc         ###   ########.fr       */
+/*   Updated: 2025/12/04 19:42:53 by pabartoc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,9 +19,9 @@
 # include <fcntl.h>  // for open and flags (optional)
 # include <stdio.h>  // for printf (optional)
 
-#ifndef BUFFER_SIZE
-# define BUFFER_SIZE 42
-#endif
+# ifndef BUFFER_SIZE
+#  define BUFFER_SIZE 42
+# endif
 
 char	*get_next_line(int fd);
 size_t	gnl_strlen(const char *str);
