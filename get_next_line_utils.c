@@ -6,7 +6,7 @@
 /*   By: pabartoc <pabartoc@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/22 23:54:08 by pabartoc          #+#    #+#             */
-/*   Updated: 2025/12/02 21:50:48 by pabartoc         ###   ########.fr       */
+/*   Updated: 2025/12/04 19:34:57 by pabartoc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,24 +42,31 @@ char	*gnl_strchr(const char *str, int c)
 	return (NULL);
 }
 
-char	*gnl_strjoin(char *str1, char *str2)
+char	*gnl_strjoin(char *line, char *buffer)
 {
-	char	*result;
+	char	*new_line;
+	size_t	len_line;
+	size_t	len_buf;
 	size_t	total_len;
 	size_t	i;
-	size_t	n;
 
-	total_len = gnl_strlen(str1) + gnl_strlen(str2);
-	result = (char *)malloc((total_len + 1) * sizeof(char));
-	if (!result)
+	len_line = gnl_strlen(line);
+	len_buf = 0;
+	while (buffer[len_buf] != '\0' && buffer[len_buf] != '\n')
+		len_buf++;
+	if (buffer[len_buf] == '\n')
+		len_buf++;
+	total_len = len_line + len_buf;
+	new_line = (char *)malloc((total_len + 1) * sizeof(char));
+	if (!new_line)
 		return (NULL);
 	i = 0;
-	n = 0;
-	while (str1 && str1[i] != '\0')
-		result[n++] = str1[i++];
+	while (i < len_line)
+		new_line[i++] = line[i++];
 	i = 0;
-	while (str2 && str2[i] != '\0')
-		result[n++] = str2[i++];
-	result[n] = '\0';
-	return (result);
+	while (i < len_buf)
+		new_line[len_line + i++] = buffer[i++];
+	new_line[total_len] = '\0';
+	free(line);
+	return (new_line);
 }
