@@ -6,7 +6,7 @@
 /*   By: pabartoc <pabartoc@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/22 23:51:34 by pabartoc          #+#    #+#             */
-/*   Updated: 2025/12/04 19:11:21 by pabartoc         ###   ########.fr       */
+/*   Updated: 2025/12/04 20:08:24 by pabartoc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,22 +22,22 @@ char	*get_next_line(int fd)
 		return (NULL);
 	line = NULL;
 	while (1)
-    {
-        if (!remainder[0])
+	{
+		if (!remainder[0])
 		{
-            bytes = read(fd, remainder, BUFFER_SIZE);
-            if (bytes < 0)
+			bytes = read(fd, remainder, BUFFER_SIZE);
+			if (bytes < 0)
 				return (NULL);
 			if (bytes == 0)
 				break;
 			remainder[bytes] = '\0';
-        }
-        line = gnl_strjoin(line, remainder);
-        if (gnl_strchr(remainder, '\n'))
-            break;
-        remainder[0] = '\0';
-    }
-    return (line);
+		}
+		line = gnl_strjoin(line, remainder);
+		if (gnl_strchr(remainder))
+			break;
+		remainder[0] = '\0';
+	}
+	return (line);
 }
 
 // int main(void)
