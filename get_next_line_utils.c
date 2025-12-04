@@ -6,7 +6,7 @@
 /*   By: pabartoc <pabartoc@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/22 23:54:08 by pabartoc          #+#    #+#             */
-/*   Updated: 2025/12/04 20:25:25 by pabartoc         ###   ########.fr       */
+/*   Updated: 2025/12/04 20:37:07 by pabartoc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,12 +55,12 @@ char	*gnl_strjoin(char *line, char *buffer)
 	total_len = len_line + len_buf;
 	new_line = (char *)malloc((total_len + 1) * sizeof(char));
 	if (!new_line)
-		return (NULL);
+		return (free(line), NULL);
 	i = -1;
-	while (i++ < len_line)
+	while (++i < len_line)
 		new_line[i] = line[i];
 	i = -1;
-	while (i++ < len_buf)
+	while (++i < len_buf)
 		new_line[len_line + i] = buffer[i];
 	new_line[total_len] = '\0';
 	free(line);
