@@ -6,7 +6,7 @@
 /*   By: pabartoc <pabartoc@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/22 23:51:34 by pabartoc          #+#    #+#             */
-/*   Updated: 2025/12/04 15:29:49 by pabartoc         ###   ########.fr       */
+/*   Updated: 2025/12/04 15:34:55 by pabartoc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ char	*get_next_line(int fd)
 {
 	static char	remainder[BUFFER_SIZE + 1];
 	char		*line;
-	size_t		bytes;
+	int		bytes;
 
 	if (fd < 0 || BUFFER_SIZE <= 0)
 		return (NULL);
