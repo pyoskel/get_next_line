@@ -6,7 +6,7 @@
 /*   By: pabartoc <pabartoc@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/22 23:54:08 by pabartoc          #+#    #+#             */
-/*   Updated: 2025/12/04 20:37:07 by pabartoc         ###   ########.fr       */
+/*   Updated: 2025/12/04 20:57:01 by pabartoc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,4 +65,20 @@ char	*gnl_strjoin(char *line, char *buffer)
 	new_line[total_len] = '\0';
 	free(line);
 	return (new_line);
+}
+
+void	gnl_clean_buffer(char *buffer)
+{
+	size_t	i;
+	size_t	j;
+
+	i = 0;
+	while (buffer[i] != '\0' && buffer[i] != '\n')
+		i++;
+	if (buffer[i] == '\n')
+		i++;
+	j = 0;
+	while (buffer[i] != '\0')
+		buffer[j++] = buffer[i++];
+	buffer[j] = '\0';
 }
