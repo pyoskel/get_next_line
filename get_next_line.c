@@ -6,7 +6,7 @@
 /*   By: pabartoc <pabartoc@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/22 23:51:34 by pabartoc          #+#    #+#             */
-/*   Updated: 2025/12/04 20:08:24 by pabartoc         ###   ########.fr       */
+/*   Updated: 2025/12/04 20:40:34 by pabartoc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ char	*get_next_line(int fd)
 		{
 			bytes = read(fd, remainder, BUFFER_SIZE);
 			if (bytes < 0)
-				return (NULL);
+				return (free(line), NULL);
 			if (bytes == 0)
 				break;
 			remainder[bytes] = '\0';
