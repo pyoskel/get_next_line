@@ -6,7 +6,7 @@
 /*   By: pabartoc <pabartoc@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/22 23:51:34 by pabartoc          #+#    #+#             */
-/*   Updated: 2025/12/05 18:06:33 by pabartoc         ###   ########.fr       */
+/*   Updated: 2025/12/05 21:43:02 by pabartoc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ char	*get_next_line(int fd)
 		}
 		line = gnl_join_chunk(line, remainder);
 		if (!line || gnl_has_newline(remainder))
-			break;
+			break ;
 		gnl_clean_buffer(remainder);
 	}
 	gnl_clean_buffer(remainder);
