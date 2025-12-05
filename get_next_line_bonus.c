@@ -6,7 +6,7 @@
 /*   By: pabartoc <pabartoc@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/04 21:46:23 by pabartoc          #+#    #+#             */
-/*   Updated: 2025/12/05 21:43:30 by pabartoc         ###   ########.fr       */
+/*   Updated: 2025/12/05 22:10:37 by pabartoc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,7 +58,8 @@ char	*get_next_line(int fd)
 // 	if (fd1 == -1 || fd2 == -1 || fd3 == -1)
 // 	{
 // 		printf("Fehler: Konnte eine der Testdateien nicht öffnen.\n");
-// 		// To be on the safe side, close any that may be open (quick & dirty for test main).
+// 		// To be on the safe side, close any that may be open 
+		// (quick & dirty for test main).
 // 		if (fd1 != -1) close(fd1);
 // 		if (fd2 != -1) close(fd2);
 // 		if (fd3 != -1) close(fd3);
@@ -102,9 +103,10 @@ char	*get_next_line(int fd)
 // 	return (0);
 // }
 
-/**
+/** --- test commands bonus ---
  * echo -e "1. Toyota\n1. BMW\n1. Ford\n1. Tesla" > testfile1.txt
  * echo -e "2. Apple\n2. Samsung\n2. Google\n2. Nokia" > testfile2.txt
  * echo -e "3. Microsoft\n3. Amazon\n3. Meta\n3. Alphabet" > testfile3.txt
- * cc -Wall -Wextra -Werror -D BUFFER_SIZE=10 get_next_line_bonus.c get_next_line_utils.c -o gnl_bonus && ./gnl_bonus
+ * cc -Wall -Wextra -Werror -D BUFFER_SIZE=10 get_next_line_bonus.c 
+ * get_next_line_utils.c -o gnl_bonus && ./gnl_bonus
  */
