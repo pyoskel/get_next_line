@@ -6,7 +6,7 @@
 /*   By: pabartoc <pabartoc@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/22 23:51:34 by pabartoc          #+#    #+#             */
-/*   Updated: 2025/12/04 21:34:05 by pabartoc         ###   ########.fr       */
+/*   Updated: 2025/12/05 18:06:33 by pabartoc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,3 +57,15 @@ char	*get_next_line(int fd)
 // 	close(fd);
 // 	return (0);
 // }
+
+/**
+ * echo -e "\nHello\nmy\nname\nis\nWait?\nWhat\nis\nmy\nname?\n" > testfile.txt
+ * cc -Wall -Wextra -Werror get_next_line.c get_next_line_utils.c -o gnl && ./gnl
+ */
+
+/**
+ * for testing very long lines
+ * python3 -c "print('A'*5000+'\n'+'H'*3000+'\n'+'X'*7000)" > gnl_long.txt
+ * cc -Wall -Wextra -Werror get_next_line.c get_next_line_utils.c -o gnl_long && ./gnl_long
+ * ./gnl_long | wc -c
+ */
