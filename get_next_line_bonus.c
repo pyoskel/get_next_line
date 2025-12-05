@@ -6,7 +6,7 @@
 /*   By: pabartoc <pabartoc@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/04 21:46:23 by pabartoc          #+#    #+#             */
-/*   Updated: 2025/12/04 23:46:20 by pabartoc         ###   ########.fr       */
+/*   Updated: 2025/12/05 01:15:23 by pabartoc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,14 +18,14 @@ char	*get_next_line(int fd)
 	char		*line;
 	int			bytes;
 
-	if (fd < 0 || BUFFER_SIZE <= 0)
+	if (fd < 0 || fd >= MAX_FD || BUFFER_SIZE <= 0)
 		return (NULL);
 	line = NULL;
 	while (1)
 	{
 		if (!remainder[fd][0])
 		{
-			bytes = read(fd, remainder, BUFFER_SIZE);
+			bytes = read(fd, remainder[fd], BUFFER_SIZE);
 			if (bytes < 0)
 				return (free(line), NULL);
 			if (bytes == 0)
